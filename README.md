@@ -41,13 +41,13 @@ Realizaremos las siguientes actividades orientadas a instalar y configurar:
 
 Instalamos XCode cli tools:
 
-``` shell
+```shell
 $ xcode-select --install
 ```
 
 Verificamos instalación de xcode cli tools:
 
-``` shell
+```shell
 $ xcode-select -p
 ```
 
@@ -55,13 +55,13 @@ $ xcode-select -p
 
 Instalar el gestor de paquetes brew:
 
-``` shell
+```shell
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Configurar brew:
 
-``` shell
+```shell
 $ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jmedina/.zprofile
 $ eval "$(/opt/homebrew/bin/brew shellenv)"
 $ brew help
@@ -69,17 +69,17 @@ $ brew help
 
 Configurar repos:
 
-``` shell
+```shell
 $ brew tap
 ```
 
-``` shell
+```shell
 $ brew tap homebrew/cask
 ```
 
 Mostrando taps:
 
-``` shell
+```shell
 $ brew tap
 homebrew/cask
 homebrew/core
@@ -87,47 +87,47 @@ homebrew/core
 
 Buscando paquetes:
 
-``` shell
+```shell
 $ brew search git
 ```
 
 Actualizando lista de paquetes:
 
-``` shell
+```shell
 $ brew update
 ```
 
 Instalando un paquete:
 
-``` shell
+```shell
 $ brew install git
 ```
 
 Desinstalando paquetes:
 
-``` shell
+```shell
 $ brew uninstall git
 ```
 
 Forzando desinstalacion de paquete:
 
-``` shell
+```shell
 $ brew unintall -f git
 ```
 	
 Actualizando paquetes:
 
-``` shell
+```shell
 $ brew upgrade
 ```
 
-``` shell
+```shell
 $ brew update && brew upgrade
 ```
 
 Limpieza de paquetes viejos:
 
-``` shell
+```shell
 $ brew cleanup
 ```
 
@@ -135,19 +135,19 @@ $ brew cleanup
 
 Instalación de vim:
 
-``` shell
+```shell
 $ brew install vim
 ```
 
 Editar config:
 
-``` shell
+```shell
 $ vim .vimrc
 ```
 
 Agregamos el contenido inicial:
 
-``` shell
+```shell
 " .vimrc
 
 " Configuración general
@@ -218,7 +218,7 @@ colorscheme challenger_deep
 
 Creamos directorio para spell check:
 
-``` shell
+```shell
 $ mkdir -p ~/.vim/spell
 $ cd ~/.vim/spell
 ```
@@ -232,7 +232,7 @@ Descargaremos los siguientes archivos:
 
 Descargamos los archivos:
 
-``` shell
+```shell
 $ wget https://ftp.vim.org/vim/runtime/spell/es.latin1.spl
 $ wget -k https://ftp.vim.org/vim/runtime/spell/es.latin1.spl
 $ wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.latin1.spl
@@ -244,7 +244,7 @@ $ wget --no-check-certificate https://ftp.vim.org/vim/runtime/spell/es.utf-8.sug
 
 Creamos los archivos para los diccionarios locales:
 
-``` shell
+```shell
 $ touch ~/.vim/spell/es.utf-8.add
 $ touch ~/.vim/spell/en.utf-8.add
 ```
@@ -260,14 +260,14 @@ Shortcuts:
 
 Instalar herramienta para gestión de plugins: plug-vim:
 
-``` shell
+```shell
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Configuración de Plugins:
 
-``` shell
+```shell
 "
 " PLUGINS: https://github.com/junegunn/vim-plug
 "
@@ -294,7 +294,7 @@ colorscheme challenger_deep
 
 Guardar vim, salir, y volver a entrar, entonces:
 
-``` shell
+```shell
 :PlugInstall
 ```
 
@@ -302,7 +302,7 @@ Guardar vim, salir, y volver a entrar, entonces:
 
 Instalamos el paquete iterm2 de cask:
 
-``` shell
+```shell
 $ brew install --cask iterm2
 ```
 
@@ -317,19 +317,19 @@ Shortcuts:
 
 Instalamos el shell zsh:
 
-``` shell
+```shell
 $ brew install zsh
 ```
 
 Instalamos oh my zsh:
 
-``` shell
+```shell
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 Cambiamos el shell default:
 
-``` shell
+```shell
 $ chsh -s $(which zsh)
 ```
 
@@ -337,25 +337,25 @@ $ chsh -s $(which zsh)
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Para habilitar los diferentes plugins cambiamos:
 
-``` shell
+```shell
 plugins=(git)
 ```
 
 por:
 
-``` shell
+```shell
 plugins=(cp colored-man-pages colorize pip python brew git vi-mode)
 ```
 
 Guardamos y re cargamos configuración:
 
-``` shell
+```shell
 $ source .zshrc
 ```
 
@@ -363,25 +363,25 @@ $ source .zshrc
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Para cambiar el tema cambiamos:
 
-``` shell
+```shell
 ZSH_THEME="robbyrussell"
 ```
 
 Por:
 
-``` shell
+```shell
 ZSH_THEME="agnoster"
 ```
 
 Guardamos y re cargamos configuración:
 
-``` shell
+```shell
 $ source .zshrc
 ```
 
@@ -391,19 +391,19 @@ Lista de temas: https://github.com/ohmyzsh/ohmyzsh/wiki/themes.
 
 Instalamos el tema powerlevel9k:
 
-``` shell
+```shell
 $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregamos la lista de sources:
 
-``` shell
+```shell
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # Powerlevel9k settings
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user host dir vcs)
@@ -418,14 +418,14 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S | %d.%m.%y}"
 
 Otras opciones:
 
-``` shell
+```shell
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
 ```
 
 Guardamos y re cargamos configuración:
 
-``` shell
+```shell
 $ source .zshrc
 ```
 
@@ -435,25 +435,25 @@ Proyecto: https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions
 
 Instalar resaltado de sintaxis en zsh:
 
-``` shell
+```shell
 $ brew install zsh-syntax-highlighting
 ```
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregar a la lista de sources:
 
-``` shell
+```shell
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 Guardamos y re cargamos configuración:
 
-``` shell
+```shell
 $ source .zshrc
 ```
 
@@ -463,25 +463,25 @@ Proyecto: https://mimosa-pudica.net/zsh-incremental.html
 
 Instalamos auto sugerencias en zsh:
 
-``` shell
+```shell
 $ brew install zsh-autosuggestions
 ```
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregar a la lista de sources:
 
-```
+```shell
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 Guardamos y re cargamos configuración:
 
-```
+```shell
 $ source .zshrc
 ```
 
@@ -489,7 +489,7 @@ $ source .zshrc
 
 Instalamos plugin incr:
 
-```
+```shell
 $ cd $HOME/.oh-my-zsh/custom/plugins
 $ mkdir incr
 $ cd incr
@@ -499,25 +499,25 @@ $ cd
 
 Editamos el archivo de configuración de zsh:
 
-```
+```shell
 $ vim .zshrc
 ```
 
 Después de la linea:
 
-```
+```shell
 source $ZSH/oh-my-zsh.sh
 ```
 
 Insertar:
 
-```
+```shell
 source $ZSH/custom/plugins/incr/incr*.zsh
 ```
 
 Guardamos y re cargamos configuración:
 
-```
+```shell
 $ source .zshrc
 ```
 
@@ -527,7 +527,7 @@ Proyecto: https://mimosa-pudica.net/zsh-incremental.html
 
 Instalamos la fuente Powerline:
 
-```
+```shell
 $ cd data/vcs/jorge.medina
 $ git clone https://github.com/powerline/fonts.git --depth=1
 $ cd fonts
@@ -535,7 +535,7 @@ $ ./install.sh
 $ cd
 ```
 
-Configurar fuente en iterm2, ir "Preferences", "Profiles", "Text":
+Configurar fuente en iterm3, ir "Preferences", "Profiles", "Text":
 
   En Fonts, cambiar a `ProFont for Powerline`.
 
@@ -547,13 +547,13 @@ Configurar tema en iterm2, ir "Preferences", "Profiles", "Colors":
 
 Instalar tmux:
 
-```
+```shell
 $ brew install tmux
 ```
 
 Habilitamos el plugin:
 
-```
+```shell
 plugins=(cp osx colored-man-pages colorize pip python brew git tmux)
 ```
 
@@ -561,62 +561,68 @@ plugins=(cp osx colored-man-pages colorize pip python brew git tmux)
 
 Instalamos paquete de coreutils:
 
-``` shell
+```shell
 $ brew install coreutils
 ```
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregamos el PATH:
 
-``` shell
+```shell
 # PATHS
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 ```
 
 Instalamos tree:
 
-``` shell
+```shell
 $ brew install tree
+```
+
+Instalamos watch:
+
+```shell
+$ brew install watch
 ```
 
 Instalamos fzf:
 
-``` shell
+```shell
 $ brew install fzf
 ```
 
 Habilitamos integraciones:
 
-``` shell
+```shell
 $ /opt/homebrew/opt/fzf/install
 ```
 
 Usar fzf en vim:
 
-``` shell
+```shell
 $ vim .vimrc
 ```
 
 Al final agregar: 
 
-``` shell
+```shell
 set rtp+=/opt/homebrew/opt/fzf
 ```
 
 Instalar ack ak para búsquedas:
 
-``` shell
+```shell
 $ brew install ack
 ```
 
 Instalamos the silver searcher
 
-``` shell
+```shell
 $ brew install the_silver_searcher
 ```
 
@@ -624,19 +630,19 @@ $ brew install the_silver_searcher
 
 Instalamos la siguiente lista de paquetes:
 
-``` shell
-$ brew install wget curl nmap make autoconf mcrypt gpg2 gettext readline openssl
+```shell
+$ brew install wget curl nmap make autoconf mcrypt gpg2 gettext readline openssl unzip
 ```
 
 Agregamos al final de .zshrc:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregamos al final:
 
-``` shell
+```shell
 # PATHS
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
@@ -647,75 +653,82 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 Instalamos google-cloud-sdk:
 
-``` shell
+```shell
 $ brew install google-cloud-sdk
 ```
 
 Editamos el archivo de configuración de zsh:
 
-``` shell
+```shell
 $ vim .zshrc
 ```
 
 Agregar a la lista de sources:
 
-``` shell
+```shell
 $ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 ```
 
 Instalación de kubectl:
 
-``` shell
+```shell
 $ brew install kubectl
 ```
 
 Instalación de ansible:
 
-``` shell
+```shell
 $ brew install ansible
+```
+
+Instalamos generador de contraseñas en cli:
+
+```shell
+$ brew install pwgen
 ```
 
 Instalamos keepassxc:
 
-``` shell
+```shell
 $ brew install --cask keepassxc
 ```
 
 Instalamos drone-cli:
 
-``` shell
+```shell
 $ brew install drone-cli
 ```
 
-``` shell
+```shell
 $ source .dronerc
 ```
 
-## Gestor de paquetes helm2
+Instalamos inso:
 
-Instalamos helm@2:
-
-``` shell
-$ brew install helm@2
+```shell
+$ brew install inso
 ```
 
-Inicializamos el cliente solamente:
+## Gestor de paquetes helm
 
-``` shell
-$ helm init --client-only
+Instalamos helm:
+
+```shell
+$ brew install helm
 ```
 
 Agregamos los repositorios de los charts que usaremos:
 
-``` shell
+```shell
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
 $ helm repo add jetstack https://charts.jetstack.io
 $ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 $ helm repo add datadog https://helm.datadoghq.com
+```
 
 Actualizamos los repositorios:
 
-``` shell
+```shell
 $ helm repo update
 ```
 
@@ -723,65 +736,96 @@ $ helm repo update
 
 Instalamos la calculadora de IPs
 
-``` shell
+```shell
 $ brew install ipcalc
 ```
 
 Instaláremos herramientas trazado de tráfico:
 
-``` shell
+```shell
 $ brew install mtr
 ```
 
 ## Herramientas de Databases
 
-```
+```shell
 $ brew install postgresql
 ```
 
-## Configuración de DBeaver
-
 Instalamos dbeaver:
 
-```
+```shell
 $ brew install dbeaver-community
 ```
 
 ## DEV
 
-``` shell
-$ brew install terraform
+En esta sección instalamos algunas herramientas que se usan en el desarrollo de software,
+en especifico para la gestión de paquetes para elixir, python y nodejs:
+
+```shell
+$ brew install asdf python npm yarn
 ```
 
-``` shell
-$ brew install python
-```
+Instalamos la herramienta markdown link check:
 
-``` shell
-$ pip3 install pre-commit
-```
-
-Instalar yarn:
-
-``` shell
-$ brew install yarn
-```
-
-Instalar markdown link check:
-
-``` shell
-$ brew install npm
-```
-
-``` shell
+```shell
 $ npm install -g markdown-link-check
 ```
 
-Instalar herramientas necesarias por hooks pre-commit:
+Instalamos terraform y otras herramientas necesarias:
 
-``` shell
-$ brew install tflint
-$ brew install terraform-docs
+```shell
+$ brew install terraform tflint terraform-docs
+```
+
+Instalamos template de terraform para m1:
+
+```shell
+$ brew install kreuzwerker/taps/m1-terraform-provider-helper
+$ m1-terraform-provider-helper install hashicorp/template -v v2.2.0
+```
+
+Instalamos checkov:
+
+```shell
+$ pip3 install -U checkov
+```
+
+Instalamos yamllint e yq:
+
+```shell
+$ brew install yamllint yq
+```
+
+Instalamos cookiecutter:
+
+```shell
+$ brew install cookiecutter
+```
+
+Instalamos el framework pre-commit:
+
+```shell
+$ pip3 install pre-commit
+```
+
+Instalamos colimay docker:
+
+```shell
+$ brew install colima docker
+```
+
+Ahora instalamos kind y skaffold:
+
+```shell
+$ brew install kind skaffold
+```
+
+Instalamos k6:
+
+```shell
+$ brew install k6
 ```
 
 ## Otras herramientas de Escritorio
@@ -799,5 +843,3 @@ Tunnelblick_3.8.6a_build_5711.dmg
 
 * Descargar el controlador de mi mouse keninston y configurar mapa de teclas.
 kensingtonworks_2.3.1_1632814867.pkg
-
-
