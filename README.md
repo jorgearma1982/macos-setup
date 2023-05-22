@@ -131,6 +131,31 @@ Limpieza de paquetes viejos:
 $ brew cleanup
 ```
 
+## Instalando comandos GNU
+
+No me gusta usar el comando `tar` que trae por defecto macos, por lo que instalo
+la versión de GNU que estoy acostumbrado a usar en Linux.
+
+```shell
+$ brew install gnu-tar
+```
+
+Hace falta agregar el path:
+
+```shell
+$ vim $HOME/.zshrc
+...
+...
+...
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+```
+
+Recargamos configuración:
+
+```shell
+$ source $HOME/.zshrc
+```
+
 ## Editor de textos vim
 
 Instalación de vim:
@@ -206,6 +231,8 @@ Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
+" vim-terraform
+Plug 'hashivim/vim-terraform'
 " Initialize plugin system
 call plug#end()
 
