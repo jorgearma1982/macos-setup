@@ -89,17 +89,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 Configuramos los repositorios de paquetes:
 
 ```shell
-brew tap
-```
-
-```shell
 brew tap homebrew/cask
 ```
 
 Mostrando taps:
 
 ```shell
-brew tap
+$ brew tap
 homebrew/cask
 homebrew/core
 ```
@@ -179,20 +175,6 @@ set softtabstop=2
 set shiftround
 set expandtab " Insertar espacios en lugar de <Tab>s
 set imrmguicolors " Activa true colors en la terminal
-
-" Configuracion spell check
-"set spell
-set nospell
-setlocal spell spelllang=es,en " Corregir palabras usando diccionarios en español
-
-" Mapeos
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
 ```
 
 Configuramos el corrector ortográfico `spell`, primero creamos directorio para spell check:
@@ -216,6 +198,15 @@ Creamos los archivos para los diccionarios locales:
 ```shell
 touch ~/.vim/spell/es.utf-8.add
 touch ~/.vim/spell/en.utf-8.add
+```
+
+Al final del archivo `.vimrc` agregamos las siguientes líneas:
+
+```shell
+" Configuracion spell check
+"set spell
+set nospell
+setlocal spell spelllang=es,en " Corregir palabras usando diccionarios en español
 ```
 
 Los atajos de teclado para manejar el spelling:
