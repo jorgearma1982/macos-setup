@@ -100,7 +100,7 @@ homebrew/cask
 homebrew/core
 ```
 
-Instalando los paquetes `git` y `wget`:
+Instalando los paquetes [git](https://git-scm.com/) y [wget](https://www.gnu.org/software/wget/):
 
 ```shell
 brew install git wget
@@ -257,30 +257,23 @@ Guardar vim, salir, y volver a entrar, entonces:
 :PlugInstall
 ```
 
-## Emulador de terminal iTerm2
+## Emulador de terminal Kitty
 
-Instalamos el paquete iterm2 de cask:
+Instalamos el paquete [Kitty](https://github.com/kovidgoyal/kitty):
 
 ```shell
-brew install --cask iterm2
+brew install kitty
 ```
-
-Shortcuts:
-
-* **Win + N**: Nuevo ventana
-* **Win + T**: Nuevo tab
-* **Shift + Win + D**: Split Horizontal
-* **Win + D**: Split Vertical
 
 ## El shell zsh con oh-my-zsh
 
-Instalamos el shell zsh:
+Instalamos el shell [zsh](https://www.zsh.org/):
 
 ```shell
 brew install zsh
 ```
 
-Instalamos oh my zsh:
+Instalamos [oh my zsh](https://ohmyz.sh/):
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
