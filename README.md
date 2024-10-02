@@ -265,6 +265,19 @@ Instalamos el paquete [Kitty](https://github.com/kovidgoyal/kitty):
 brew install kitty
 ```
 
+Descargamos los temas de kitty:
+
+```shell
+git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
+```
+
+Configuramos el tema de Dracula:
+
+```shell
+cd ~/.config/kitty
+ln -s ./kitty-themes/themes/Dracula.conf ~/.config/kitty/theme.conf
+```
+
 ## El shell zsh con oh-my-zsh
 
 Instalamos el shell [zsh](https://www.zsh.org/):
