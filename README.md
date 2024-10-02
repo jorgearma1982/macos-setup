@@ -488,7 +488,7 @@ source .zshrc
 
 Proyecto: https://mimosa-pudica.net/zsh-incremental.html
 
-### iterm2 y zsh con fuente Powerline y tema Solarized.
+### Fuente Powerline
 
 Instalamos la fuente Powerline:
 
@@ -498,28 +498,6 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd
-```
-
-Configurar fuente en iterm3, ir "Preferences", "Profiles", "Text":
-
-  En Fonts, cambiar a `ProFont for Powerline`.
-
-Configurar tema en iterm2, ir "Preferences", "Profiles", "Colors":
-
-  En `Color Presets...`, cambiar a `Solarized Dark`.
-
-### Integrar tmux en zsh
-
-Instalar tmux:
-
-```shell
-brew install tmux
-```
-
-Habilitamos el plugin:
-
-```shell
-plugins=(cp osx colored-man-pages colorize pip python brew git tmux)
 ```
 
 ## Herramientas de búsqueda en linea de comandos
