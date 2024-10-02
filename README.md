@@ -133,10 +133,36 @@ Edito la configuración del shell para agregar el path:
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 ```
 
+Instalamos paquete de coreutils:
+
+```shell
+brew install coreutils
+```
+
+Editamos el archivo de configuración de zsh:
+
+Agregamos el PATH:
+
+```shell
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+```
+
 Recargamos configuración:
 
 ```shell
 source $HOME/.zshrc
+```
+
+Instalamos tree:
+
+```shell
+brew install tree
+```
+
+Instalamos watch:
+
+```shell
+brew install watch
 ```
 
 ## Editor de textos vim
@@ -502,47 +528,17 @@ cd
 
 ## Herramientas de búsqueda en linea de comandos
 
-Instalamos paquete de coreutils:
-
-```shell
-brew install coreutils
-```
-
-Editamos el archivo de configuración de zsh:
-
-```shell
-vim .zshrc
-```
-
-Agregamos el PATH:
-
-```shell
-# PATHS
-export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-```
-
-Instalamos tree:
-
-```shell
-brew install tree
-```
-
-Instalamos watch:
-
-```shell
-brew install watch
-```
-
-Instalamos fzf:
+Instalamos [fzf](https://github.com/junegunn/fzf):
 
 ```shell
 brew install fzf
 ```
 
-Habilitamos integraciones:
+Habilitamos la integración para zsh, editamos configuración y agregamos::
 
 ```shell
-/opt/homebrew/opt/fzf/install
+# zsh
+source <(fzf --zsh)
 ```
 
 Usar fzf en vim:
@@ -557,13 +553,13 @@ Al final agregar:
 set rtp+=/opt/homebrew/opt/fzf
 ```
 
-Instalar ack ak para búsquedas:
+Instalamos [ack](https://beyondgrep.com/) para búsquedas:
 
 ```shell
 brew install ack
 ```
 
-Instalamos the silver searcher
+Instalamos [the silver searcher](https://github.com/ggreer/the_silver_searcher):
 
 ```shell
 brew install the_silver_searcher
@@ -574,7 +570,7 @@ brew install the_silver_searcher
 Instalamos la siguiente lista de paquetes:
 
 ```shell
-brew install wget curl nmap make autoconf mcrypt gpg2 gettext readline openssl unzip
+brew install curl nmap make autoconf mcrypt gpg2 gettext readline openssl unzip
 ```
 
 Agregamos al final de .zshrc:
@@ -594,7 +590,7 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 ## Herramientas de gestión Cloud
 
-Instalamos google-cloud-sdk:
+Instalamos [google-cloud-sdk](https://cloud.google.com/sdk/?hl=es):
 
 ```shell
 brew install google-cloud-sdk
@@ -610,6 +606,12 @@ Agregar a la lista de sources:
 
 ```shell
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+```
+
+Instalamos [tfenv](https://github.com/tfutils/tfenv) y [terragrunt](https://terragrunt.gruntwork.io/):
+
+```shell
+brew install tfenv terragrunt
 ```
 
 Instalación de kubectl:
