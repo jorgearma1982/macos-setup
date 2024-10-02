@@ -2,7 +2,7 @@
 
 ## Introducción
 
-En esta guía describo las configuraciones del sistema `MacOS` sobre la arquitectura `M2` para adaptarlo a un ambiente
+En esta guía describo las configuraciones del sistema `macOS` sobre la arquitectura `M1` para adaptarlo a un ambiente
 de trabajo en donde pueda realizar tareas relacionadas a la administración de este tipo de sistemas:
 
 * Servidores Linux
@@ -61,7 +61,10 @@ Instalamos el entorno de desarrollo de apps de apple [XCode](https://developer.a
 xcode-select --install
 ```
 
-Verificamos instalación de xcode cli tools:
+En una máquina nueva este componente no vienen instalado, por lo que aparece una ventana para seleccionar la
+instalación, se aceptan las condiciones y nos vamos a tomar un café porque va a tomar un buen rato.
+
+Al terminar verificamos la instalación de xcode:
 
 ```shell
 xcode-select -p
@@ -78,6 +81,7 @@ Instalamos el gestor de paquetes [Brew](https://brew.sh/):
 Configuramos el perfil del shell para usar brew:
 
 ```shell
+echo >> /Users/jmedina/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jmedina/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
