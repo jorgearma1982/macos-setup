@@ -100,10 +100,10 @@ homebrew/cask
 homebrew/core
 ```
 
-Instalando el paquete git:
+Instalando los paquetes `git` y `wget`:
 
 ```shell
-brew install git
+brew install git wget
 ```
 
 Actualizando paquetes:
