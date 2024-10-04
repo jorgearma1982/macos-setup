@@ -139,12 +139,26 @@ Instalamos paquete de coreutils:
 brew install coreutils
 ```
 
-Editamos el archivo de configuración de zsh:
-
-Agregamos el PATH:
+Editamos el archivo de configuración de zsh, al final agregamos el `PATH` personalizado:
 
 ```shell
+# Custom PATH
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+```
+
+Instalamos la siguiente lista de paquetes para usar en el día a día para descargar, construir y asegurar software:
+
+```shell
+brew install curl make autoconf mcrypt gpg2 gettext readline openssl unzip
+```
+
+Al final del archivo `.zshrc` agregamos las siguientes líneas para modificar el `PATH`:
+
+```shell
+# Custom PATH
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 ```
 
 Recargamos configuración:
@@ -565,29 +579,6 @@ Instalamos [the silver searcher](https://github.com/ggreer/the_silver_searcher):
 brew install the_silver_searcher
 ```
 
-## Herramientas de linea de comandos
-
-Instalamos la siguiente lista de paquetes:
-
-```shell
-brew install curl nmap make autoconf mcrypt gpg2 gettext readline openssl unzip
-```
-
-Agregamos al final de .zshrc:
-
-```shell
-vim .zshrc
-```
-
-Agregamos al final:
-
-```shell
-# PATHS
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
-```
-
 ## Herramientas de gestión Cloud
 
 Instalamos [google-cloud-sdk](https://cloud.google.com/sdk/?hl=es):
@@ -669,31 +660,41 @@ helm repo update
 
 ## Herramientas de Redes
 
-Instalamos la calculadora de IPs
+En esta sección listamos la instalación de algunas otras herramientas de red.
+
+Empezamos con [ipcalc](https://github.com/kjokjo/ipcalc) por la calculadora de direcciones IP:
 
 ```shell
 brew install ipcalc
 ```
 
-Instaláremos herramientas trazado de tráfico:
+Luego instalamos [mtr](https://www.bitwizard.nl/mtr/) la herramienta para generar trazado de tráfico:
 
 ```shell
 brew install mtr
 ```
 
-## Herramientas de Databases
+Seguimos con la instalación de [nmap](https://nmap.org/), una herramienta para escaneo de red:
+
+```shell
+brew install nmap
+```
+
+## Herramientas de Bases de datos
+
+Instalamos el cliente de bases de datos [postgreSQL](https://www.postgresql.org/):
 
 ```shell
 brew install postgresql
 ```
 
-Instalamos dbeaver:
+Ahora instalamos [dbeaver](https://dbeaver.io/), una herramienta para gestión de datos compatible con postgres:
 
 ```shell
 brew install dbeaver-community
 ```
 
-## DEV
+## Desarrollo
 
 En esta sección instalamos algunas herramientas que se usan en el desarrollo de software,
 en especifico para la gestión de paquetes para elixir, python y nodejs:
