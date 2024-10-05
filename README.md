@@ -5,6 +5,7 @@
 En esta guía describo las configuraciones del sistema `macOS` sobre la arquitectura `M1` para adaptarlo a un ambiente
 de trabajo en donde pueda realizar tareas relacionadas a la administración de este tipo de sistemas:
 
+* Laptop de trabajo
 * Servidores Linux
 * Recursos Cloud
 * Clusters Kubernetes
@@ -120,8 +121,8 @@ brew cleanup
 
 ## Instalando comandos GNU
 
-No me gusta usar el comando `tar` que trae por defecto macos, por lo que instalo
-la versión de GNU que estoy acostumbrado a usar en Linux.
+No me gusta usar el comando tar que trae por defecto macos, por lo que instalo la versión de GNU de
+[tar](https://www.gnu.org/software/tar/) que estoy acostumbrado a usar en Linux.
 
 ```shell
 brew install gnu-tar
@@ -133,7 +134,7 @@ Edito la configuración del shell para agregar el path:
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 ```
 
-Instalamos paquete de coreutils:
+Instalamos paquete de [coreutils](https://www.gnu.org/software/coreutils/):
 
 ```shell
 brew install coreutils
@@ -392,9 +393,19 @@ source .zshrc
 
 Lista de temas: https://github.com/ohmyzsh/ohmyzsh/wiki/themes.
 
-### Configurando tema powerlevel19k
+### Configurando tema Powerlevel19k con fuente Powerline
 
-Instalamos el tema powerlevel9k:
+Instalamos la fuente [Powerline](https://github.com/powerline/fonts):
+
+```shell
+cd data/vcs/jorge.medina
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd
+```
+
+Instalamos el tema [powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k):
 
 ```shell
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
@@ -528,18 +539,6 @@ source .zshrc
 
 Proyecto: https://mimosa-pudica.net/zsh-incremental.html
 
-### Fuente Powerline
-
-Instalamos la fuente Powerline:
-
-```shell
-cd data/vcs/jorge.medina
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd
-```
-
 ## Herramientas de búsqueda en linea de comandos
 
 Instalamos [fzf](https://github.com/junegunn/fzf):
@@ -605,13 +604,13 @@ Instalamos [tfenv](https://github.com/tfutils/tfenv) y [terragrunt](https://terr
 brew install tfenv terragrunt
 ```
 
-Instalación de kubectl:
+Instalación de [kubectl](https://kubernetes.io/es/docs/reference/kubectl/):
 
 ```shell
 brew install kubectl
 ```
 
-Instalación de ansible:
+Instalación de [ansible](https://www.ansible.com/):
 
 ```shell
 brew install ansible
@@ -623,21 +622,15 @@ Instalamos generador de contraseñas en cli:
 brew install pwgen
 ```
 
-Instalamos KeepassXC:
+Instalamos [KeepassXC](https://keepassxc.org/) para gestionar nuestras contraseñas de forma local:
 
 ```shell
 brew install --cask keepassxc
 ```
 
-Instalamos inso:
-
-```shell
-brew install inso
-```
-
 ## Gestor de paquetes helm
 
-Instalamos helm:
+Instalamos [helm](https://helm.sh) para instalar aplicaciones y servicios en kubernetes de forma simple:
 
 ```shell
 brew install helm
