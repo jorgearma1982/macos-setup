@@ -18,14 +18,19 @@ Desktop` que normalmente usaba en arquitecturas x86.
 
 Para dejar a punto la máquina, realizaremos la configuración de los siguientes componentes:
 
+* Actualizaciones del sistema
+* Cifrar los datos del disco
 * Entornos de desarrollo
 * Gestores de paquetes
 * Editor de textos
 * Emulador de Terminal
 * Entorno del shell
-* Cliente VPN
-* Navegador Web
 * Herramientas de gestión Cloud
+* Gestión de base de datos
+* Desarrollo de software
+* Cliente VPN
+* Herramientas de red
+* Mouse externo
 
 ## Actualizar sistema
 
@@ -54,7 +59,7 @@ de tu cuenta iCloud.
 
 Una vez seleccionado el método, inicia el proceso de cifrado, el cual tarda un poco dependiendo de los datos actuales.
 
-## Herramientas de linea de comando XCode
+## Herramientas de entorno de desarrollo XCode
 
 Instalamos el entorno de desarrollo de apps de apple [XCode](https://developer.apple.com/xcode/):
 
@@ -73,7 +78,9 @@ xcode-select -p
 
 ## Gestor de paquetes Brew
 
-Instalamos el gestor de paquetes [Brew](https://brew.sh/):
+Para complementar las herramientas que el sistema `macOS` incluye en su base de unix, instalaremos `brew` como
+herramienta de gestión de paquetes para `macOS`, esta es una herramienta del tipo `apt` o `yum` en distribuciones
+Linux.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -101,7 +108,8 @@ homebrew/cask
 homebrew/core
 ```
 
-Instalando los paquetes [git](https://git-scm.com/) y [wget](https://www.gnu.org/software/wget/):
+Instalando los paquetes [git](https://git-scm.com/) y [wget](https://www.gnu.org/software/wget/) para descargar
+software desde el Internet:
 
 ```shell
 brew install git wget
@@ -447,7 +455,7 @@ source .zshrc
 
 Proyecto: https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#option-2-install-for-oh-my-zsh
 
-### Configuración del plugin syntax hightlighting en zsh
+### Configuración del plugin syntax highlighting en zsh
 
 Instalar resaltado de sintaxis en zsh:
 
@@ -638,8 +646,6 @@ Instalamos [KeepassXC](https://keepassxc.org/) para gestionar nuestras contrase�
 brew install --cask keepassxc
 ```
 
-## Gestor de paquetes helm
-
 Instalamos [helm](https://helm.sh) para instalar aplicaciones y servicios en kubernetes de forma simple:
 
 ```shell
@@ -659,28 +665,6 @@ Actualizamos los repositorios:
 
 ```shell
 helm repo update
-```
-
-## Herramientas de Redes
-
-En esta sección listamos la instalación de algunas otras herramientas de red.
-
-Empezamos con [ipcalc](https://github.com/kjokjo/ipcalc) por la calculadora de direcciones IP:
-
-```shell
-brew install ipcalc
-```
-
-Luego instalamos [mtr](https://www.bitwizard.nl/mtr/) la herramienta para generar trazado de tráfico:
-
-```shell
-brew install mtr
-```
-
-Seguimos con la instalación de [nmap](https://nmap.org/), una herramienta para escaneo de red:
-
-```shell
-brew install nmap
 ```
 
 ## Herramientas de Bases de datos
@@ -743,6 +727,56 @@ Instalamos k6:
 brew install k6
 ```
 
+## Configurando la VPN
+
+Para conectarse de forma segura a los recursos cloud regularmente se usa alguna VPN por ejemplo basadas en
+`OpenVPN`, para conectarnos instalamos el software [Tunnelblick](https://tunnelblick.net/), el cual es un cliente
+de OpenVPN para `macOS`.
+
+Con este software es fácil conectarse a más de una VPN sin afectar nuestra navegación.
+
+## Herramientas de Redes
+
+En esta sección listamos la instalación de algunas otras herramientas de red.
+
+Empezamos con [ipcalc](https://github.com/kjokjo/ipcalc) por la calculadora de direcciones IP:
+
+```shell
+brew install ipcalc
+```
+
+Luego instalamos [mtr](https://www.bitwizard.nl/mtr/) la herramienta para generar trazado de tráfico:
+
+```shell
+brew install mtr
+```
+
+Seguimos con la instalación de [nmap](https://nmap.org/), una herramienta para escaneo de red:
+
+```shell
+brew install nmap
+```
+
+## Configurando mouse trackball Kensington
+
+Cuando trabajo con la macbook en casa, prefiero usar un mouse externo, en mi caso particular, prefiero usar la
+mac con la mano izquierda, así que necesito personalizar la configuración del `Kensington Expert Mouse`, el cual
+es un mouse de tipo trackball con 4 botones y scroll.
+
+Vamos a la página de [KensingtonWorks](https://kensington.com/software/kensingtoneworks) y descargamos la versión
+para `macOS 14 Sonoma`, lo instalamos y durante el proceso damos los permisos necesarios para que el software
+pueda realizar las personalizaciones necesarias.
+
+En `BUTTONS` invertimos los botones `Left Click` y `Right Click`, también `Back` y `Middle Clic`.
+
+Aquí realizo otras personalizaciones para las diferentes combinaciones de botones, sean atajos generales o por
+aplicación.
+
+En `POINTER` se cambia la velocidad predefinida, prefiero tener algo más rápido, un `6` por ejemplo, y habilitamos
+la aceleración y lo ponemos en `4`.
+
+En `SCROLLING` subimos la velocidad a `4`.
+
 ## Otras herramientas de Escritorio
 
 Adicional al software que instalo desde repositorios públicos también hago uso de estos otros programas que vienen
@@ -750,5 +784,3 @@ en formato de paquetes `dmg`.
 
 * Google Chrome, iniciar sesión y sincronizar configuraciones: googlechrome.dmg
 * Brave Browser, iniciar sesión y sincronizar configuraciones: Brave-Browser-arm64.dmg
-* Tunnelblick, importar configuración y realizar conexión: Tunnelblick_3.8.6a_build_5711.dmg
-* Controlador Kensington y configurar mapa de teclas: kensingtonworks_2.3.1_1632814867.pkg
