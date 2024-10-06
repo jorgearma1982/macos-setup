@@ -580,37 +580,47 @@ brew install the_silver_searcher
 
 ## Herramientas de gestión Cloud
 
-Instalamos [google-cloud-sdk](https://cloud.google.com/sdk/?hl=es):
+Instalamos [google-cloud-sdk](https://cloud.google.com/sdk/?hl=es) para gestionar recursos en Google Cloud::
 
 ```shell
 brew install google-cloud-sdk
 ```
 
-Editamos el archivo de configuración de zsh:
-
-```shell
-vim .zshrc
-```
-
-Agregar a la lista de sources:
+Editamos el archivo de configuración de zsh y agregamos la siguiente línea::
 
 ```shell
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 ```
 
-Instalamos [tfenv](https://github.com/tfutils/tfenv) y [terragrunt](https://terragrunt.gruntwork.io/):
+Instalamos las herramientas [tfenv](https://github.com/tfutils/tfenv) y [terragrunt](https://terragrunt.gruntwork.io/)
+para gestionar la infraestructura cloud cómo código:
 
 ```shell
 brew install tfenv terragrunt
 ```
 
-Instalación de [kubectl](https://kubernetes.io/es/docs/reference/kubectl/):
+Instalamos las herramientas [tflint](https://github.com/terraform-linters/tflint) y [terraform-docs](https://terraform-docs.io/)
+para mejorar la calidad del código de terraform:
+
+```shell
+brew install tflint terraform-docs
+```
+
+Instalamos template de terraform para m1:
+
+```shell
+brew install kreuzwerker/taps/m1-terraform-provider-helper
+m1-terraform-provider-helper install hashicorp/template -v v2.2.0
+```
+
+Instalamos la herramienta [kubectl](https://kubernetes.io/es/docs/reference/kubectl/) para gestionar clusters
+de contenedores Kubernetes:
 
 ```shell
 brew install kubectl
 ```
 
-Instalación de [ansible](https://www.ansible.com/):
+Instalamos [ansible](https://www.ansible.com/) para automatizar las configuraciones de servidores Linux:
 
 ```shell
 brew install ansible
@@ -690,29 +700,11 @@ brew install dbeaver-community
 ## Desarrollo
 
 En esta sección instalamos algunas herramientas que se usan en el desarrollo de software,
-en especifico para la gestión de paquetes para elixir, python y nodejs:
+en especifico para la gestión de paquetes para [elixir](https://elixir-lang.org/), [python](https://www.python.org/)
+y [nodejs](https://nodejs.org/):
 
 ```shell
 brew install asdf python npm yarn
-```
-
-Instalamos la herramienta markdown link check:
-
-```shell
-npm install -g markdown-link-check
-```
-
-Instalamos terraform y otras herramientas necesarias:
-
-```shell
-brew install terraform tflint terraform-docs
-```
-
-Instalamos template de terraform para m1:
-
-```shell
-brew install kreuzwerker/taps/m1-terraform-provider-helper
-m1-terraform-provider-helper install hashicorp/template -v v2.2.0
 ```
 
 Instalamos yamllint e yq:
