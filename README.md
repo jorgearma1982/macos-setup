@@ -697,31 +697,32 @@ Instalamos yamllint e yq:
 brew install yamllint yq
 ```
 
-Instalamos cookiecutter:
+Instalamos [cookiecutter](https://www.cookiecutter.io/) para generar plantillas del boilerplate de proyectos de software:
 
 ```shell
 brew install cookiecutter
 ```
 
-Instalamos el framework pre-commit:
+Instalamos el framework [pre-commit](https://pre-commit.com/):
 
 ```shell
 pip3 install pre-commit
 ```
 
-Instalamos colima y docker:
+Instalamos [colima](https://github.com/abiosoft/colima) y [docker](https://www.docker.com/) para construir
+y correr contenedores en local sin tener que pagar por licencias de `Docker Desktop`:
 
 ```shell
 brew install colima docker
 ```
 
-Ahora instalamos kind:
+Ahora instalamos [kind](https://kind.sigs.k8s.io/) para crear clusters kubernetes en local:
 
 ```shell
 brew install kind 
 ```
 
-Instalamos k6:
+Instalamos [k6](https://k6.io/) para realizar pruebas de carga en aplicaciones web:
 
 ```shell
 brew install k6
