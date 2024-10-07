@@ -600,6 +600,12 @@ Editamos el archivo de configuración de zsh y agregamos la siguiente línea::
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 ```
 
+Instalamos el plugin para autenticarse con google cloud para clusters GKE:
+
+```shell
+gcloud components install gke-gcloud-auth-plugin
+```
+
 Instalamos las herramientas [tfenv](https://github.com/tfutils/tfenv) y [terragrunt](https://terragrunt.gruntwork.io/)
 para gestionar la infraestructura cloud cómo código:
 
