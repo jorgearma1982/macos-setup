@@ -188,6 +188,36 @@ Instalamos watch:
 brew install watch
 ```
 
+Instalamos vlc:
+
+```shell
+brew install vlc
+```
+
+Instalamos cmatrix:
+
+```shell
+brew install cmatrix
+```
+
+Instalamos markdownlint-cli2:
+
+```shell
+brew install markdownlint-cli2
+```
+
+Instalamos btop:
+
+```shell
+brew install btop
+```
+
+Instalamos unrar:
+
+```shell
+brew install rar
+```
+
 ## Editor de textos vim
 
 Instalamos el editor de textos [vim](https://www.vim.org/):
@@ -614,10 +644,10 @@ brew install tfenv terragrunt
 ```
 
 Instalamos las herramientas [tflint](https://github.com/terraform-linters/tflint) y [terraform-docs](https://terraform-docs.io/)
-para mejorar la calidad del código de terraform:
+para mejorar la calidad y seguridad del código de terraform:
 
 ```shell
-brew install tflint terraform-docs
+brew install tflint tfsec terraform-docs
 ```
 
 Instalamos template de terraform para m1:
@@ -697,10 +727,10 @@ y [nodejs](https://nodejs.org/):
 brew install asdf python npm yarn
 ```
 
-Instalamos yamllint e yq:
+Instalamos yamllint, jq e yq:
 
 ```shell
-brew install yamllint yq
+brew install yamllint jq yq
 ```
 
 Instalamos [cookiecutter](https://www.cookiecutter.io/) para generar plantillas del boilerplate de proyectos de software:
@@ -762,6 +792,12 @@ Seguimos con la instalación de [nmap](https://nmap.org/), una herramienta para 
 
 ```shell
 brew install nmap
+```
+
+Ahora vemos la instalación de [grpcurl](https://github.com/fullstorydev/grpcurl), una herramienta para hacer pruebas a servicios web basados en GRPC:
+
+```shell
+brew install grpcurl
 ```
 
 ## Configurando mouse trackball Kensington
