@@ -654,6 +654,7 @@ Instalamos template de terraform para m1:
 
 ```shell
 brew install kreuzwerker/taps/m1-terraform-provider-helper
+m1-terraform-provider-helper activate hashicorp/template
 m1-terraform-provider-helper install hashicorp/template -v v2.2.0
 ```
 
